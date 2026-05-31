@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic AI Security Initiative</title>
+    <meta
+      name="description"
+      content="Studying the security and trustworthiness of agentic AI systems."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__brand" href="index.html">
+          <img class="site-nav__logo" src="assets/logo.svg" alt="" />
+        </a>
+        <button
+          class="site-nav__toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul
+          id="primary-menu"
+          class="site-nav__links"
+          data-nav-links
+          aria-label="Primary"
+        >
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="people.html">People</a></li>
+          <li><a class="site-nav__link" href="projects.html">Projects</a></li>
+          <li>
+            <a class="site-nav__link" href="publications.html">Publications</a>
+          </li>
+          <li><a class="site-nav__link" href="funding.html">Funding</a></li>
+          <li><a class="site-nav__link" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" aria-label="NDS2 Lab, Fall 2025">
+        <div class="hero__media">
+          <img
+            class="hero__image-bg"
+            src="assets/people/nds2_Fall2025.jpg"
+            aria-hidden="true"
+            alt=""
+          />
+          <img
+            class="hero__image"
+            src="assets/people/nds2_Fall2025.jpg"
+            alt="Members of the NDS2 Lab, Fall 2025"
+          />
+        </div>
+      </section>
+
+      <section class="mission section">
+        <div class="container container--narrow">
+          <h2 class="section-heading">Mission</h2>
+          <div class="mission__body">
+            <p>
+              Agentic AI systems &mdash; software that plans, reasons, and acts
+              with limited human oversight &mdash; introduce a class of
+              security problems that did not exist a few years ago. Our work
+              spans the infrastructure that supports autonomous agents, the
+              attacks that target them, and the defenses that make them
+              resilient enough to deploy in the real world.
+            </p>
+            <p>
+              Building safer AI systems is a long-term, technical effort
+              &mdash; one that requires careful threat modeling, principled
+              defenses, and rigorous evaluation. Our goal is to advance the
+              science of agentic AI security and to translate that science into
+              practice with industry, government, and the broader research
+              community.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured" aria-label="Featured work">
+        <div class="container">
+          <h2 class="section-heading">Featured</h2>
+          <div class="carousel" data-carousel>
+            <div class="carousel__track" data-carousel-track tabindex="0">
+              <article class="feature-card">
+                <div class="feature-card__thumb">
+                  <img src="assets/placeholder.png" alt="" />
+                </div>
+                <div>
+                  <span class="feature-card__tag">Publication</span>
+                  <h3 class="feature-card__title">
+                    SAGA: A Secure Architecture for Agentic Systems
+                  </h3>
+                  <p class="feature-card__desc">
+                    A new infrastructure design for governing what autonomous
+                    agents can and cannot do across services.
+                  </p>
+                </div>
+              </article>
+
+              <article class="feature-card">
+                <div class="feature-card__thumb">
+                  <img src="assets/placeholder.png" alt="" />
+                </div>
+                <div>
+                  <span class="feature-card__tag">Project</span>
+                  <h3 class="feature-card__title">
+                    MUZZLE: Constraining Web Agents
+                  </h3>
+                  <p class="feature-card__desc">
+                    Investigating how web-acting LLM agents can be steered and
+                    contained against prompt-driven misbehavior.
+                  </p>
+                </div>
+              </article>
+
+              <article class="feature-card">
+                <div class="feature-card__thumb">
+                  <img src="assets/placeholder.png" alt="" />
+                </div>
+                <div>
+                  <span class="feature-card__tag">Grant</span>
+                  <h3 class="feature-card__title">
+                    Funding for Agentic AI Security Research
+                  </h3>
+                  <p class="feature-card__desc">
+                    Ongoing support from NSF, Amazon, Google, Microsoft, and
+                    Good Ventures sustains this line of work.
+                  </p>
+                </div>
+              </article>
+
+              <article class="feature-card">
+                <div class="feature-card__thumb">
+                  <img src="assets/placeholder.png" alt="" />
+                </div>
+                <div>
+                  <span class="feature-card__tag">Publication</span>
+                  <h3 class="feature-card__title">
+                    ACE: Defenses for Agentic Systems
+                  </h3>
+                  <p class="feature-card__desc">
+                    Mechanisms for detecting and recovering from compromised
+                    actions in multi-step agentic pipelines.
+                  </p>
+                </div>
+              </article>
+            </div>
+
+            <div class="carousel__controls">
+              <button
+                class="carousel__btn"
+                type="button"
+                data-carousel-prev
+                aria-label="Previous featured item"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <button
+                class="carousel__btn"
+                type="button"
+                data-carousel-next
+                aria-label="Next featured item"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <div class="site-footer__org">Agentic AI Security Initiative</div>
+          <a class="site-footer__email" href="mailto:nds2lab@gmail.com">nds2lab@gmail.com</a>
+        </div>
+        <div class="site-footer__meta">
+          <div>&copy; 2026 NDS2 Lab</div>
+          <div>
+            <span class="site-footer__updated" data-last-updated>Last updated: 2026-05-31</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects &middot; Agentic AI Security Initiative</title>
+    <meta
+      name="description"
+      content="Research projects of the Agentic AI Security Initiative, organized by topic."
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg" />
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <a class="visually-hidden" href="#main">Skip to main content</a>
+
+    <header class="site-nav">
+      <div class="container site-nav__inner">
+        <a class="site-nav__brand" href="index.html">
+          <img class="site-nav__logo" src="assets/logo.svg" alt="" />
+        </a>
+        <button
+          class="site-nav__toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="primary-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+          <span class="site-nav__toggle-bar" aria-hidden="true"></span>
+        </button>
+        <ul
+          id="primary-menu"
+          class="site-nav__links"
+          data-nav-links
+          aria-label="Primary"
+        >
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="people.html">People</a></li>
+          <li>
+            <a class="site-nav__link" href="projects.html" aria-current="page"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a class="site-nav__link" href="publications.html">Publications</a>
+          </li>
+          <li><a class="site-nav__link" href="funding.html">Funding</a></li>
+          <li><a class="site-nav__link" href="blog.html">Blog</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-header">
+        <div class="container container--narrow">
+          <h1>Projects</h1>
+          <p>
+            A taxonomy of our research, grouped by the problem each line of
+            work addresses.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="project-grid">
+
+            <article class="project-card">
+              <div class="project-card__img">
+                <img src="assets/placeholder.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <h2 class="project-card__title">Secure Infrastructure for Agentic Systems</h2>
+                <p class="project-card__desc">
+                  Designing the underlying platforms, protocols, and trust
+                  boundaries that let autonomous agents act on behalf of users
+                  without exceeding their authority.
+                </p>
+              </div>
+              <div class="project-card__footer">
+                <ul class="project-card__projects">
+                  <li><a href="https://arxiv.org/pdf/2504.21034" target="_blank" rel="noopener">SAGA</a></li>
+                  <li><a href="https://arxiv.org/pdf/2605.06933" target="_blank" rel="noopener">MAGIQ</a></li>
+                  <li><a href="https://arxiv.org/pdf/2605.12364" target="_blank" rel="noopener">SAGA-BFT</a></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__img">
+                <img src="assets/placeholder.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <h2 class="project-card__title">Web Agent Security</h2>
+                <p class="project-card__desc">
+                  Studying how language-model agents that browse and act on the
+                  web can be misled, hijacked, or otherwise driven toward
+                  unintended behavior &mdash; and how to constrain them.
+                </p>
+              </div>
+              <div class="project-card__footer">
+                <ul class="project-card__projects">
+                  <li><a href="https://arxiv.org/pdf/2602.09222" target="_blank" rel="noopener">MUZZLE</a></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__img">
+                <img src="assets/placeholder.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <h2 class="project-card__title">Defenses for Agentic Systems</h2>
+                <p class="project-card__desc">
+                  Developing detection, containment, and recovery mechanisms for
+                  multi-step agentic pipelines, with the goal of catching
+                  misbehavior before it causes irreversible action.
+                </p>
+              </div>
+              <div class="project-card__footer">
+                <ul class="project-card__projects">
+                  <li><a href="https://arxiv.org/pdf/2504.20984" target="_blank" rel="noopener">ACE</a></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__img">
+                <img src="assets/placeholder.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <h2 class="project-card__title">Multi-Agent Systems</h2>
+                <p class="project-card__desc">
+                  Examining security and coordination challenges that arise when
+                  multiple agents interact, including adversarial agents embedded
+                  in otherwise honest populations.
+                </p>
+              </div>
+              <div class="project-card__footer">
+                <ul class="project-card__projects">
+                  <li><a href="https://arxiv.org/pdf/2605.15132" target="_blank" rel="noopener">APWA</a></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__img">
+                <img src="assets/placeholder.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <h2 class="project-card__title">RL Security</h2>
+                <p class="project-card__desc">
+                  Attacks against and defenses for reinforcement-learning agents,
+                  including backdoor and poisoning threats that surface only
+                  under specific deployment conditions.
+                </p>
+              </div>
+              <div class="project-card__footer">
+                <ul class="project-card__projects">
+                  <li><a href="https://proceedings.neurips.cc/paper_files/paper/2024/file/cb03b5108f1c3a38c990ef0b45bc8b31-Paper-Conference.pdf" target="_blank" rel="noopener">SleeperNets</a></li>
+                  <li><a href="https://arxiv.org/pdf/2602.05089" target="_blank" rel="noopener">DAZE</a></li>
+                  <li><a href="https://arxiv.org/pdf/2410.13995" target="_blank" rel="noopener">Q-Incept</a></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card__img">
+                <img src="assets/placeholder.png" alt="" />
+              </div>
+              <div class="project-card__body">
+                <h2 class="project-card__title">Automated Cybersecurity Defenses</h2>
+                <p class="project-card__desc">
+                  Using language models and retrieval-based methods to scale up
+                  analyst capacity for security operations, incident response,
+                  and threat investigation.
+                </p>
+              </div>
+              <div class="project-card__footer">
+                <ul class="project-card__projects">
+                  <li><a href="https://arxiv.org/abs/2603.18196" target="_blank" rel="noopener">Retrieval-Augmented LLMs for Security Incident Analysis</a></li>
+                </ul>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div>
+          <div class="site-footer__org">Agentic AI Security Initiative</div>
+          <a class="site-footer__email" href="mailto:nds2lab@gmail.com">nds2lab@gmail.com</a>
+        </div>
+        <div class="site-footer__meta">
+          <div>&copy; 2026 NDS2 Lab</div>
+          <div>
+            <span class="site-footer__updated" data-last-updated>Last updated: 2026-05-31</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="scripts/main.js" defer></script>
+  </body>
+</html>

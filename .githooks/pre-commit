@@ -1,0 +1,64 @@
+#!/usr/bin/env bash
+# Pre-commit hook:
+#   1. Stamp the "Last updated" date in every staged HTML file.
+#   2. Lint staged HTML/CSS/JS files.
+#
+# Enable once with: git config core.hooksPath .githooks
+
+set -e
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPO_ROOT"
+
+STAGED=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '\.(html|css|js)$' || true)
+if [ -z "$STAGED" ]; then
+  exit 0
+fi
+
+# --- 1. Stamp "Last updated" in staged HTML files ----------------------------
+
+TODAY=$(date +%Y-%m-%d)
+STAGED_HTML=$(echo "$STAGED" | grep -E '\.html$' || true)
+
+if [ -n "$STAGED_HTML" ]; then
+  for f in $STAGED_HTML; do
+    [ -f "$f" ] || continue
+    if grep -q 'data-last-updated' "$f"; then
+      sed -i.bak -E \
+        "s|(data-last-updated[^>]*>)Last updated: [0-9]{4}-[0-9]{2}-[0-9]{2}(</span>)|\1Last updated: ${TODAY}\2|g" \
+        "$f"
+      rm -f "$f.bak"
+      git add "$f"
+    fi
+  done
+fi
+
+# --- 2. Lint -----------------------------------------------------------------
+
+run_tool() {
+  local cmd=$1
+  shift
+  if [ -x "node_modules/.bin/$cmd" ]; then
+    "node_modules/.bin/$cmd" "$@"
+  elif command -v "$cmd" >/dev/null 2>&1; then
+    "$cmd" "$@"
+  else
+    echo "pre-commit: '$cmd' not installed locally — skipping. Run 'npm install' to enable linting." >&2
+    return 0
+  fi
+}
+
+if [ -n "$STAGED_HTML" ]; then
+  echo "pre-commit: linting HTML…"
+  # shellcheck disable=SC2086
+  run_tool htmlhint $STAGED_HTML
+fi
+
+STAGED_CSSJS=$(echo "$STAGED" | grep -E '\.(css|js)$' || true)
+if [ -n "$STAGED_CSSJS" ]; then
+  echo "pre-commit: checking CSS/JS formatting…"
+  # shellcheck disable=SC2086
+  run_tool prettier --check $STAGED_CSSJS
+fi
+
+exit 0

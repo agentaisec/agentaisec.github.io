@@ -1,0 +1,17 @@
+{
+  "name": "agent-sec-website",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Static website for the Agentic AI Security Initiative.",
+  "scripts": {
+    "lint:html": "htmlhint \"**/*.html\"",
+    "lint:format": "prettier --check \"**/*.{css,js,json,md}\"",
+    "lint": "npm run lint:html && npm run lint:format",
+    "format": "prettier --write \"**/*.{css,js,json,md}\"",
+    "hooks:install": "git config core.hooksPath .githooks"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.1.4",
+    "prettier": "^3.3.3"
+  }
+}

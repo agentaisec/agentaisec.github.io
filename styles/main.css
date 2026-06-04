@@ -856,8 +856,11 @@ hr {
 
 /* ---------- Page headers (non-home pages) ---------- */
 
+/*---- background: var(--color-bg-dark); ----*/
+  
+
 .page-header {
-  background: var(--color-bg-dark);
+  background: #1a2657;; 
   padding: 3rem 0 2.5rem;
   border-bottom: 1px solid var(--color-border-dark);
 }

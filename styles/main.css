@@ -335,7 +335,7 @@ hr {
 
 .hero {
   position: relative;
-  background: var(--color-bg-dark);
+  background: var(--color-bg-light);
   overflow: hidden;
 }
 

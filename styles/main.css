@@ -333,14 +333,16 @@ hr {
 
 /* ---------- Hero (home) ---------- */
 
+/* The whole hero is one continuous dark "stage": the dark title band flows
+   straight into the photo area below, so the photo reads as a framed
+   centerpiece rather than a strip with empty sides. */
 .hero {
   position: relative;
-  background: var(--color-bg-light);
+  background: var(--color-bg-dark);
   overflow: hidden;
 }
 
-/* Title band that sits above the group photo. Uses the dark palette so it
-   blends seamlessly into the photo's dark gradient edges below. */
+/* Title band that sits above the group photo, on the shared dark stage. */
 .hero__intro {
   position: relative;
   background: var(--color-bg-dark);
@@ -403,67 +405,39 @@ hr {
   letter-spacing: 0.01em;
 }
 
+/* The photo is ~4:3, so full-width would be far too tall. Instead it is
+   capped in height and centered on the dark stage, with the background
+   flanking it on both sides. A soft radial "spotlight" lifts it off the
+   stage — depth without any blur. */
 .hero__media {
   position: relative;
-  width: 100%;
-  max-width: 1600px;
-  margin: 0 auto;
-  aspect-ratio: 3 / 1;
-  overflow: hidden;
-}
-
-/* Blurred backdrop — fills the full container so the sides aren't empty */
-.hero__image-bg {
-  position: absolute;
-  inset: -30px;
-  width: calc(100% + 60px);
-  height: calc(100% + 60px);
-  object-fit: cover;
-  filter: blur(28px);
-  z-index: 0;
-}
-
-/* Sharp image — full height, natural aspect ratio, centered */
-.hero__image {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 100%;
-  width: auto;
-  z-index: 1;
-}
-
-/* Soft fade on left/right edges so the photo never feels stretched
-   on very wide viewports. */
-.hero__media::before,
-.hero__media::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 14%;
-  pointer-events: none;
-  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1.5rem 3.5rem;
 }
 
 .hero__media::before {
-  left: 0;
-  background: linear-gradient(
-    to right,
-    var(--color-bg-dark) 0%,
-    rgba(15, 20, 25, 0) 100%
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse 55% 75% at 50% 42%,
+    var(--color-bg-dark-soft) 0%,
+    var(--color-bg-dark) 72%
   );
+  pointer-events: none;
 }
 
-.hero__media::after {
-  right: 0;
-  background: linear-gradient(
-    to left,
-    var(--color-bg-dark) 0%,
-    rgba(15, 20, 25, 0) 100%
-  );
+/* Sharp image, natural aspect ratio, framed as a centerpiece. */
+.hero__image {
+  position: relative;
+  width: auto;
+  max-width: 100%;
+  max-height: 460px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-dark);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
 }
 
 .hero__caption {
@@ -1066,16 +1040,15 @@ hr {
   }
 
   .hero__intro {
-    padding: 2.5rem 0 2.25rem;
+    padding: 2.5rem 0 1.75rem;
   }
 
   .hero__media {
-    aspect-ratio: 16 / 9;
+    padding: 0.5rem 1rem 2.5rem;
   }
 
-  .hero__media::before,
-  .hero__media::after {
-    width: 8%;
+  .hero__image {
+    max-height: 320px;
   }
 
   .feature-card {

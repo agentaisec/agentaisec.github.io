@@ -339,6 +339,70 @@ hr {
   overflow: hidden;
 }
 
+/* Title band that sits above the group photo. Uses the dark palette so it
+   blends seamlessly into the photo's dark gradient edges below. */
+.hero__intro {
+  position: relative;
+  background: var(--color-bg-dark);
+  color: var(--color-text-inverse);
+  text-align: center;
+  padding: 3.5rem 0 3rem;
+  overflow: hidden;
+}
+
+/* Soft accent glow for depth, kept subtle behind the text. */
+.hero__intro::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  width: 80%;
+  height: 180%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(37, 150, 190, 0.18) 0%,
+    rgba(37, 150, 190, 0) 65%
+  );
+  pointer-events: none;
+}
+
+.hero__title {
+  position: relative;
+  margin: 0;
+  color: var(--color-text-inverse);
+  font-size: clamp(1.9rem, 4.5vw, 3.1rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.hero__title-accent {
+  color: var(--color-accent);
+  white-space: nowrap;
+}
+
+/* Accent bar between the title and subtitle — echoes the section headings. */
+.hero__title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 3px;
+  margin: 1.1rem auto 0;
+  background: var(--color-accent);
+  border-radius: 2px;
+}
+
+.hero__subtitle {
+  position: relative;
+  margin: 1.1rem 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2.2vw, 1.4rem);
+  color: var(--color-text-inverse-muted);
+  letter-spacing: 0.01em;
+}
+
 .hero__media {
   position: relative;
   width: 100%;
@@ -999,6 +1063,10 @@ hr {
     color: var(--color-accent-strong);
     border-left: 3px solid var(--color-accent);
     padding-left: 21px;
+  }
+
+  .hero__intro {
+    padding: 2.5rem 0 2.25rem;
   }
 
   .hero__media {

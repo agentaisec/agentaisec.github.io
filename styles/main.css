@@ -287,7 +287,7 @@ hr {
 
 .site-footer {
   margin-top: 5rem;
-  background: var(--color-bg-dark);
+  background: #1a2657;
   color: var(--color-text-inverse-muted);
   padding: 2.5rem 0 2rem;
   font-size: 0.92rem;

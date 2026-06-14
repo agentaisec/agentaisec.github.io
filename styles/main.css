@@ -13,9 +13,9 @@
   --color-text-inverse-muted: #aab2bd;
   --color-border: #e4e6ea;
   --color-border-dark: #2a323d;
-  --color-accent: #2596be;
-  --color-accent-strong: #1d7a99;
-  --color-accent-soft: rgba(37, 150, 190, 0.12);
+  --color-accent: #3a56d4;
+  --color-accent-strong: #2a3f9e;
+  --color-accent-soft: rgba(58, 86, 212, 0.12);
 
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     "Helvetica Neue", Arial, "Noto Sans", sans-serif;
@@ -364,8 +364,8 @@ hr {
   transform: translateX(-50%);
   background: radial-gradient(
     ellipse at center,
-    rgba(37, 150, 190, 0.18) 0%,
-    rgba(37, 150, 190, 0) 65%
+    rgba(58, 86, 212, 0.18) 0%,
+    rgba(58, 86, 212, 0) 65%
   );
   pointer-events: none;
 }
@@ -381,7 +381,9 @@ hr {
 }
 
 .hero__title-accent {
-  color: var(--color-accent);
+  /* A lighter tint of the accent (same hue) so it reads brightly against
+     the dark hero stage. */
+  color: #6c83e8;
   white-space: nowrap;
 }
 

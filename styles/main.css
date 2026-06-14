@@ -189,9 +189,10 @@ hr {
 }
 
 .site-nav__logo {
-  height: 46px;
+  height: 48px;
   width: auto;
   flex-shrink: 0;
+  display: block;
 }
 
 
